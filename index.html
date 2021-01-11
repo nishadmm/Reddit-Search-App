@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riddet Search App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+  <!-- Css file -->
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <!-- Nav bar -->
+  <nav>
+    <h1><span class="primary-text"><i class="fab fa-get-pocket"></i> FIND</span> IT </h1>
+    <a href="#" class="clear-btn"><i class="fas fa-trash-alt"></i> Clear Page</a>
+  </nav>
+  <!-- Container -->
+  <div id="search-container">
+    <div id="form-container">
+      <h4><span class="primary-text">Search</span> Reddit</h4>
+      <form>
+        <input type="text" id="search-input" class="mt-1" placeholder="Enter Search Term...">
+        <div class="mt-1">
+          <span id="sortby"><i class="fas fa-sort"></i> Sort By : </span>
+          <span id="latest-radio">
+            <input type="radio" name="sortby" value="New">
+            <label>Latest</label>
+          </span>
+          <span id="rele-radio">
+            <input type="radio" name="sortby" value="relevence" checked>
+            <label>Relevance</label>
+          </span>
+          <span id="top-radio">
+            <input type="radio" name="sortby" value="top">
+            <label>Top</label>
+          </span>
+          <span id="comment-radio">
+            <input type="radio" name="sortby" value="comments">
+            <label>comments</label>
+          </span>
+          <span id="hot-radio">
+            <input type="radio" name="sortby" value="hot">
+            <label id="hot-labe">Hot</label>
+          </span>
+        </div>
+        <div class="mt-1">
+          <span id="limit"><i class="fas fa-shield-alt"></i> Limit: </span>
+          <select>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20" selected>20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+            <option value="60">60</option>
+            <option value="70">70</option>
+            <option value="80">80</option>
+            <option value="90">90</option>
+            <option value="100">100</option>
+          </select>
+        </div>
+        <button type="submit" class="mt-1"><i class="fab fa-searchengin"></i> Search</button>
+      </form>
+    </div>
+    <!-- Loader -->
+    <div id="loader-container">
+      <div id="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- Results -->
+    <div id="search-term"></div>
+    <div id="results"></div>
+  </div>
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>
