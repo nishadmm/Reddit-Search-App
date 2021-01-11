@@ -38,7 +38,7 @@ searchContainer.addEventListener('submit', e => {
     }
 
     // Get 
-    fetch(`http://www.reddit.com/search.json?q=${searchTerm}&sort=${sortBy}&limit=${limit}`)
+    fetch(`https://www.reddit.com/search.json?q=${searchTerm}&sort=${sortBy}&limit=${limit}`)
       .then(res => res.json())
       .then(data => data.data.children.map(data => data.data))
       .then(posts => {
